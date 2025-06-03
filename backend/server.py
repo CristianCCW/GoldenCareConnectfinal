@@ -10,9 +10,8 @@ from typing import List, Optional
 import uuid
 from datetime import datetime
 import smtplib
-from email.mime.text import MimeText
-from email.mime.multipart import MimeMultipart
-
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
@@ -79,7 +78,7 @@ def send_email_notification(contact_data: ContactInquiry):
             return
         
         # Create message
-        msg = MimeMultipart()
+        msg = MIMEMultipart()
         msg['From'] = email_user
         msg['To'] = notification_email
         msg['Subject'] = f"New Contact Form Submission - Golden Care Connect"
@@ -95,7 +94,7 @@ def send_email_notification(contact_data: ContactInquiry):
         Please respond to this inquiry promptly.
         """
         
-        msg.attach(MimeText(body, 'plain'))
+        msg.attach(MIMEText(body, 'plain'))
         
         # Send email
         server = smtplib.SMTP(email_host, int(email_port))
