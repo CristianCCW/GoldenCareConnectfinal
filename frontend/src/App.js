@@ -224,7 +224,7 @@ function App() {
           <h2 className="text-xxlarge font-bold text-center text-gray-800 mb-8">Get In Touch</h2>
           <form onSubmit={handleSubmit} className="max-w-3xl mx-auto space-y-6">
             <div>
-              <label htmlFor="name" className="block text-large font-medium text-gray-700 mb-1">Your Name</label>
+              <label htmlFor="name" className="block text-large font-medium text-gray-700 mb-1">Your Name *</label>
               <input 
                 type="text" 
                 id="name" 
@@ -232,11 +232,12 @@ function App() {
                 value={formData.name}
                 onChange={handleInputChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-large focus:ring-2 focus:ring-gold focus:border-transparent"
+                placeholder="Enter your full name"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-large focus:ring-2 focus:ring-gold focus:border-transparent transition-all duration-200"
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-large font-medium text-gray-700 mb-1">Your Email</label>
+              <label htmlFor="email" className="block text-large font-medium text-gray-700 mb-1">Your Email *</label>
               <input 
                 type="email" 
                 id="email" 
@@ -244,11 +245,12 @@ function App() {
                 value={formData.email}
                 onChange={handleInputChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-large focus:ring-2 focus:ring-gold focus:border-transparent"
+                placeholder="Enter your email address"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-large focus:ring-2 focus:ring-gold focus:border-transparent transition-all duration-200"
               />
             </div>
             <div>
-              <label htmlFor="message" className="block text-large font-medium text-gray-700 mb-1">Message</label>
+              <label htmlFor="message" className="block text-large font-medium text-gray-700 mb-1">Message *</label>
               <textarea 
                 id="message" 
                 name="message"
@@ -256,7 +258,8 @@ function App() {
                 value={formData.message}
                 onChange={handleInputChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-large focus:ring-2 focus:ring-gold focus:border-transparent"
+                placeholder="Tell us how we can help you with technology..."
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-large focus:ring-2 focus:ring-gold focus:border-transparent transition-all duration-200 resize-vertical"
               ></textarea>
             </div>
             <button 
