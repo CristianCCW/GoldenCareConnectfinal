@@ -1,38 +1,152 @@
-.App {
-    text-align: center;
+.gold-gradient {
+    background: linear-gradient(135deg, #FFD700 0%, #D4AF37 100%);
 }
 
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+.text-gold {
+    color: #D4AF37;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+.border-gold {
+    border-color: #D4AF37;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+.btn-gold {
+    background: linear-gradient(135deg, #FFD700 0%, #D4AF37 100%);
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: calc(10px + 2vmin);
+}
+
+.btn-gold:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     color: white;
+    text-decoration: none;
 }
 
-.App-link {
-    color: #61dafb;
+.text-large {
+    font-size: 1.125rem;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
+.text-xlarge {
+    font-size: 1.25rem;
+}
+
+.text-xxlarge {
+    font-size: 1.875rem;
+}
+
+.text-xxxlarge {
+    font-size: 2.25rem;
+}
+
+.max-w-8xl {
+    max-width: 90rem;
+}
+
+.leading-relaxed {
+    line-height: 1.75;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+.focus\:ring-2:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px #D4AF37;
+}
+
+.focus\:ring-gold:focus {
+    --tw-ring-color: #D4AF37;
+}
+
+.focus\:border-transparent:focus {
+    border-color: transparent;
+}
+
+/* Hover effects for cards */
+.hover\:border-gold:hover {
+    border-color: #D4AF37;
+}
+
+/* Transitions */
+.transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.duration-300 {
+    transition-duration: 300ms;
+}
+
+/* Custom styles for better senior accessibility */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Larger touch targets for mobile accessibility */
+@media (max-width: 768px) {
+    .btn-gold {
+        min-height: 48px;
+        padding: 12px 24px;
     }
-    to {
-        transform: rotate(360deg);
+    
+    input, textarea, button {
+        min-height: 48px;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .gold-gradient {
+        background: #B8860B;
+    }
+    
+    .text-gold {
+        color: #B8860B;
+    }
+    
+    .border-gold {
+        border-color: #B8860B;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .btn-gold:hover {
+        transform: none;
+    }
+    
+    .transition-all {
+        transition: none;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Print styles */
+@media print {
+    .gold-gradient {
+        background: #333 !important;
+        color: white !important;
+    }
+    
+    .btn-gold {
+        background: #333 !important;
+        color: white !important;
     }
 }
